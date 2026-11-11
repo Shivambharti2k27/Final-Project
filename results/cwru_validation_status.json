@@ -1,0 +1,7 @@
+{
+  "attempted_at_utc": "2026-11-11T08:08:04.888605+00:00",
+  "source": "https://engineering.case.edu/sites/default/files/12k_drive_end_bearing_fault_data.zip",
+  "real_data_validation_done": false,
+  "downloaded": false,
+  "skip_reason": "HTTPError: HTTP Error 404: Not Found"
+}

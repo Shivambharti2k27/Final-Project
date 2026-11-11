@@ -1,0 +1,1 @@
+"""Rolling-bearing simulation and prognostics project."""

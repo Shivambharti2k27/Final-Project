@@ -1,0 +1,112 @@
+{
+  "classification": {
+    "dataset_windows": 4000,
+    "independent_runs": 80,
+    "split_run_counts": {
+      "train": 56,
+      "validation": 12,
+      "test": 12
+    },
+    "classical_models": {
+      "SVM": {
+        "accuracy": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0,
+        "f1_weighted": 1.0,
+        "validation_f1_weighted": 1.0
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0,
+        "f1_weighted": 1.0,
+        "validation_f1_weighted": 1.0
+      },
+      "KNN": {
+        "accuracy": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0,
+        "f1_weighted": 1.0,
+        "validation_f1_weighted": 1.0
+      },
+      "Gradient Boosting": {
+        "accuracy": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0,
+        "f1_weighted": 1.0,
+        "validation_f1_weighted": 1.0
+      }
+    },
+    "best_classical_model": "SVM",
+    "best_classical_test": {
+      "accuracy": 1.0,
+      "precision_weighted": 1.0,
+      "recall_weighted": 1.0,
+      "f1_weighted": 1.0,
+      "validation_f1_weighted": 1.0
+    },
+    "cnn_test": {
+      "accuracy": 0.825,
+      "precision_weighted": 0.848465884752429,
+      "recall_weighted": 0.825,
+      "f1_weighted": 0.8210957644939786
+    },
+    "noise_robustness_weighted_f1": {
+      "0": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "15": 1.0,
+      "20": 1.0
+    },
+    "low_to_high_speed_load_test": {
+      "accuracy": 0.9125,
+      "precision_weighted": 0.9351851851851852,
+      "recall_weighted": 0.9125,
+      "f1_weighted": 0.9097356544165054
+    },
+    "low_domain_train_windows": 1400,
+    "high_domain_test_windows": 2000,
+    "confusion_matrices": [
+      "svm_confusion.png",
+      "random_forest_confusion.png",
+      "knn_confusion.png",
+      "gradient_boosting_confusion.png",
+      "best_classifier_confusion.png",
+      "cnn_confusion.png"
+    ]
+  },
+  "rul": {
+    "life_histories": 30,
+    "observations": 1200,
+    "split_life_counts": {
+      "train": 21,
+      "validation": 4,
+      "test": 5
+    },
+    "classical_models": {
+      "Random Forest": {
+        "rmse_hours": 9.924676330960137,
+        "mae_hours": 7.370205508558792,
+        "asymmetric_score": 1.3623932853889413
+      },
+      "Gradient Boosting": {
+        "rmse_hours": 10.22073172679332,
+        "mae_hours": 7.695741365929637,
+        "asymmetric_score": 1.8595959309647514
+      }
+    },
+    "classical_validation_rmse_hours": {
+      "Random Forest": 14.082922596162756,
+      "Gradient Boosting": 13.396840488599691
+    },
+    "best_classical_model": "Gradient Boosting",
+    "temporal_cnn_test": {
+      "rmse_hours": 12.722909308198673,
+      "mae_hours": 9.506129264831543,
+      "asymmetric_score": 2.097264051437378
+    },
+    "score_definition": "Mean exp(-error/10)-1 for early predictions; exp(error/13)-1 for late predictions, error=predicted-true RUL.",
+    "held_out_life_example": "L015",
+    "input_health_indicator": "Noisy severity-derived HI is included; direct severity and age are excluded."
+  }
+}
